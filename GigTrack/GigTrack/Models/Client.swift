@@ -1,0 +1,31 @@
+import Foundation
+import SwiftData
+
+/// A billing contact / client that invoices are sent to.
+@Model
+final class Client {
+    var id: UUID
+    var name: String
+    var email: String
+    var phone: String
+    var address: String
+    var createdAt: Date
+
+    @Relationship(deleteRule: .nullify, inverse: \Invoice.client)
+    var invoices: [Invoice]? = []
+
+    init(
+        name: String,
+        email: String = "",
+        phone: String = "",
+        address: String = "",
+        createdAt: Date = .now
+    ) {
+        self.id = UUID()
+        self.name = name
+        self.email = email
+        self.phone = phone
+        self.address = address
+        self.createdAt = createdAt
+    }
+}

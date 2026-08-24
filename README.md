@@ -1,1 +1,66 @@
-# chrisapp
+# GigTrack
+
+An iOS app for people in the music industry to manage the business side of gigging: receipts, invoices, hours, and driving costs.
+
+## Features
+
+1. **Receipts** — Snap a photo with the camera or upload one from your library, tag it with a vendor, amount, category, and date.
+2. **Invoices** — Create clients, build line-item invoices, track status (Draft / Sent / Paid / Overdue), and share a PDF via Mail/Messages/AirDrop. See at a glance what's paid vs. outstanding.
+3. **Timer** — Add band members / crew, start and stop a live timer per person and project, or log/edit hours manually. Hourly rate on each person gives an estimated earnings total.
+4. **Driving costs** — Log trips (start/end location, miles, purpose) and calculate cost using a per-mile rate (defaults to a standard mileage rate, editable in Settings). See totals across all trips.
+
+Everything is stored locally on-device using **SwiftData** — no backend or account required.
+
+## Project Structure
+
+```
+GigTrack/
+├── GigTrack.xcodeproj/        # Xcode project (open this in Xcode)
+└── GigTrack/                  # App source
+    ├── GigTrackApp.swift      # App entry point, SwiftData model container
+    ├── Models/                # SwiftData models (Person, TimeEntry, Client,
+    │                          #   Invoice, InvoiceLineItem, Receipt, DrivingTrip)
+    ├── Views/
+    │   ├── RootTabView.swift  # Top-level tab bar
+    │   ├── Receipts/
+    │   ├── Invoices/
+    │   ├── Time/
+    │   ├── Driving/
+    │   ├── Settings/
+    │   └── Components/        # Shared UI pieces (StatCard, ShareSheet, etc.)
+    ├── Utilities/              # Formatters, invoice PDF generator, app-storage keys
+    └── Assets.xcassets/        # App icon + accent color
+```
+
+## Requirements
+
+- macOS with **Xcode 16** (or newer) installed
+- iOS 17.0+ deployment target (uses SwiftData)
+
+## Getting Started
+
+1. Clone the repo and open `GigTrack/GigTrack.xcodeproj` in Xcode.
+2. Select an iPhone simulator (or your device) and hit **Run** (⌘R).
+3. On first launch, go to the **Settings** tab to set your business name/email (used on shared invoice PDFs), preferred currency, and default mileage rate.
+4. Add a few **People** (Time tab) and **Clients** (Invoices tab) to get started.
+
+No signing/provisioning is required to run in the Simulator. To run on a physical device, select your team under the target's **Signing & Capabilities** tab.
+
+### App Icon
+
+The asset catalog includes an empty `AppIcon` slot (`GigTrack/Assets.xcassets/AppIcon.appiconset`). Drop a 1024×1024 PNG (no transparency) into that folder and reference it as `AppIcon.png` in its `Contents.json`, or simply drag an icon onto the App Icon well in Xcode's asset catalog editor.
+
+### Regenerating the Xcode project
+
+If you add or remove Swift files, `GigTrack/GigTrack.xcodeproj/project.pbxproj` needs to include them. A helper script rebuilds the project file by scanning the `GigTrack/GigTrack` source tree:
+
+```bash
+cd GigTrack
+python3 Scripts/gen_pbxproj.py
+```
+
+This is a convenience script for regenerating file references — it is not part of the app itself, and running it is optional if you just add files directly from within Xcode (which updates the project file for you automatically).
+
+## Notes on Permissions
+
+The app requests camera access (`NSCameraUsageDescription`) only when you choose "Take Photo" while adding a receipt. Photo library access uses the modern `PhotosPicker`, which does not require a usage description or full-library permission.
