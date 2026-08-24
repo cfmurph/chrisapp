@@ -1,0 +1,537 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		517520A5386F4BDC82C66E3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65266893B1C948409361D70E /* Assets.xcassets */; };
+		986B525CF3A344F49DAD04C3 /* GigTrackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA2D140C3CF49E5AB6040E9 /* GigTrackApp.swift */; };
+		BA0AE70FF9E340EBAF2D39C7 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DF2B50FB77461BB2CD76E4 /* Client.swift */; };
+		52E3524E5E6E4BBC8B4D3C4F /* DrivingTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0663BDB9F2904B209555BB1D /* DrivingTrip.swift */; };
+		49628E87754A4F6995310A2F /* Invoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787747EBC508441E97267374 /* Invoice.swift */; };
+		68368573D260431BA59B2767 /* InvoiceLineItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA1CA8C44F24E9CAF7041AE /* InvoiceLineItem.swift */; };
+		DB19D007786141C295A1C84F /* InvoiceStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6970FB0FA588476691276177 /* InvoiceStatus.swift */; };
+		D4C3EC5945604615902490BA /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80D8F1AEA3C43D39BFFA30A /* Person.swift */; };
+		07C704F6DD5641DAA139125A /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A079EB36A14F7C808058F0 /* Receipt.swift */; };
+		3DF235054F3D44E2A305CBE5 /* TimeEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF17C45477EA47F68886B860 /* TimeEntry.swift */; };
+		DF4A0F3EB7F34522AB1AB83E /* AppStorageKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120DFBC2D7BE4E05AE6FCB7A /* AppStorageKeys.swift */; };
+		D748F1CF4DF04C95BBDF63B8 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC0D46C11AB42FB99665316 /* Formatters.swift */; };
+		971787C2F16D447D8AAD607D /* InvoicePDFGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F70E50204E402D8453017C /* InvoicePDFGenerator.swift */; };
+		47414E2B5B794C828DF3777F /* CameraPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAC31F4119F4FE48B52947F /* CameraPicker.swift */; };
+		325AC3838C514C8191E5EE5D /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B13E14DFFAF4CD99F74122E /* EmptyStateView.swift */; };
+		05DB3CC928F8480F9AD42888 /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6E47B598F47FB9A34705D /* ShareSheet.swift */; };
+		DDCC29AD235E4176A522BEFA /* StatCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D5553FFF904AD0809D9C00 /* StatCard.swift */; };
+		B8B258CBA7204DED87B11F21 /* AddEditTripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2FDF00ECA543DD8594EB2C /* AddEditTripView.swift */; };
+		B587043AD4C7499D8BF37D49 /* DrivingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2517564DCD984372A7888485 /* DrivingListView.swift */; };
+		7AE91CD6864448CF960023FA /* TripRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F423911EF4D480F9B6D6608 /* TripRowView.swift */; };
+		CC00F2F51A684F56A2EAC523 /* AddEditClientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06ECB69924743F2B0B284E4 /* AddEditClientView.swift */; };
+		C295744FA9F34BC0BC8AB61D /* AddEditInvoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54ABF4D6EE9D459FAA7A136F /* AddEditInvoiceView.swift */; };
+		C5B1C6FA7DF34FE8BDB07C34 /* ClientsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F2B6C88727416193610B01 /* ClientsListView.swift */; };
+		2DFDE48430284EF084567B5C /* InvoiceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1448FD617548CAAABC54BB /* InvoiceDetailView.swift */; };
+		28D2FD65CACF4087938E6656 /* InvoiceRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2479FE63024E4F78842C58F2 /* InvoiceRowView.swift */; };
+		486AA4511ECF400FACFDBD00 /* InvoicesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C60EAE989BA4D25B3D04485 /* InvoicesListView.swift */; };
+		A592983692A2400981158045 /* AddEditReceiptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB389B098B1A46BEB0557601 /* AddEditReceiptView.swift */; };
+		824F90B8C385455B83A7EB40 /* ReceiptRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A528D0F00C49D4BFE92475 /* ReceiptRowView.swift */; };
+		C6657677E496431F8A28F29C /* ReceiptsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900C1DCAFE3741B5A96FAF3F /* ReceiptsListView.swift */; };
+		A244ABBE128444B499CDBEA8 /* RootTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151DA6BF826843A3893F968C /* RootTabView.swift */; };
+		B62E2115DCF04893A0F1BF96 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8457C5341664F0E8B19C39E /* SettingsView.swift */; };
+		9941B4FFE3AC4F2C9C26321C /* AddEditPersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E10D8ACD9040D48A48008E /* AddEditPersonView.swift */; };
+		684B3358BA564E77BD685D2B /* AddEditTimeEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4B8BE1A7F74E9FBEDECBBD /* AddEditTimeEntryView.swift */; };
+		730EE310537947AC9179DCA3 /* PeopleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E995D82040B4527B0B42E8A /* PeopleListView.swift */; };
+		EFB3FC47AB244A8B888778D5 /* TimeEntriesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB17CE6585949BEBAFBF214 /* TimeEntriesListView.swift */; };
+		3AC69870995C442095537382 /* TimeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3384C7F0FB0E41B9BC93D34C /* TimeTabView.swift */; };
+		7DA5A021DD2C43B39BBA268A /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBBB3DABEFF43389D8F24F9 /* TimerView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5BBEFD0000000000000000A1 /* GigTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GigTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		65266893B1C948409361D70E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5BA2D140C3CF49E5AB6040E9 /* GigTrackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GigTrackApp.swift; sourceTree = "<group>"; };
+		A3DF2B50FB77461BB2CD76E4 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		0663BDB9F2904B209555BB1D /* DrivingTrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrivingTrip.swift; sourceTree = "<group>"; };
+		787747EBC508441E97267374 /* Invoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Invoice.swift; sourceTree = "<group>"; };
+		0EA1CA8C44F24E9CAF7041AE /* InvoiceLineItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceLineItem.swift; sourceTree = "<group>"; };
+		6970FB0FA588476691276177 /* InvoiceStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceStatus.swift; sourceTree = "<group>"; };
+		B80D8F1AEA3C43D39BFFA30A /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		64A079EB36A14F7C808058F0 /* Receipt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receipt.swift; sourceTree = "<group>"; };
+		BF17C45477EA47F68886B860 /* TimeEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeEntry.swift; sourceTree = "<group>"; };
+		120DFBC2D7BE4E05AE6FCB7A /* AppStorageKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorageKeys.swift; sourceTree = "<group>"; };
+		EBC0D46C11AB42FB99665316 /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
+		26F70E50204E402D8453017C /* InvoicePDFGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoicePDFGenerator.swift; sourceTree = "<group>"; };
+		ACAC31F4119F4FE48B52947F /* CameraPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPicker.swift; sourceTree = "<group>"; };
+		7B13E14DFFAF4CD99F74122E /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		3AD6E47B598F47FB9A34705D /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
+		18D5553FFF904AD0809D9C00 /* StatCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatCard.swift; sourceTree = "<group>"; };
+		AC2FDF00ECA543DD8594EB2C /* AddEditTripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditTripView.swift; sourceTree = "<group>"; };
+		2517564DCD984372A7888485 /* DrivingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrivingListView.swift; sourceTree = "<group>"; };
+		8F423911EF4D480F9B6D6608 /* TripRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripRowView.swift; sourceTree = "<group>"; };
+		F06ECB69924743F2B0B284E4 /* AddEditClientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditClientView.swift; sourceTree = "<group>"; };
+		54ABF4D6EE9D459FAA7A136F /* AddEditInvoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditInvoiceView.swift; sourceTree = "<group>"; };
+		F0F2B6C88727416193610B01 /* ClientsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsListView.swift; sourceTree = "<group>"; };
+		8C1448FD617548CAAABC54BB /* InvoiceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceDetailView.swift; sourceTree = "<group>"; };
+		2479FE63024E4F78842C58F2 /* InvoiceRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceRowView.swift; sourceTree = "<group>"; };
+		7C60EAE989BA4D25B3D04485 /* InvoicesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoicesListView.swift; sourceTree = "<group>"; };
+		FB389B098B1A46BEB0557601 /* AddEditReceiptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditReceiptView.swift; sourceTree = "<group>"; };
+		21A528D0F00C49D4BFE92475 /* ReceiptRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptRowView.swift; sourceTree = "<group>"; };
+		900C1DCAFE3741B5A96FAF3F /* ReceiptsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptsListView.swift; sourceTree = "<group>"; };
+		151DA6BF826843A3893F968C /* RootTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabView.swift; sourceTree = "<group>"; };
+		B8457C5341664F0E8B19C39E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		40E10D8ACD9040D48A48008E /* AddEditPersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditPersonView.swift; sourceTree = "<group>"; };
+		0D4B8BE1A7F74E9FBEDECBBD /* AddEditTimeEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditTimeEntryView.swift; sourceTree = "<group>"; };
+		7E995D82040B4527B0B42E8A /* PeopleListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListView.swift; sourceTree = "<group>"; };
+		8CB17CE6585949BEBAFBF214 /* TimeEntriesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeEntriesListView.swift; sourceTree = "<group>"; };
+		3384C7F0FB0E41B9BC93D34C /* TimeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTabView.swift; sourceTree = "<group>"; };
+		7CBBB3DABEFF43389D8F24F9 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9AB0689E065C4178AA9EA5D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5BBEFD0000000000000000C1 = {
+			isa = PBXGroup;
+			children = (
+				1DA42E88DA54447AA289BBC7 /* GigTrack */,
+				5BBEFD0000000000000000D1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5BBEFD0000000000000000D1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5BBEFD0000000000000000A1 /* GigTrack.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1DA42E88DA54447AA289BBC7 /* GigTrack */ = {
+			isa = PBXGroup;
+			children = (
+				65266893B1C948409361D70E /* Assets.xcassets */,
+				5BA2D140C3CF49E5AB6040E9 /* GigTrackApp.swift */,
+				977487C6772E4B4899CBB14B /* Models */,
+				6F6934508A5D489A80E2FDFC /* Utilities */,
+				39D2A26B73B24C2E9C1C8A48 /* Views */,
+			);
+			path = GigTrack;
+			sourceTree = "<group>";
+		};
+		977487C6772E4B4899CBB14B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A3DF2B50FB77461BB2CD76E4 /* Client.swift */,
+				0663BDB9F2904B209555BB1D /* DrivingTrip.swift */,
+				787747EBC508441E97267374 /* Invoice.swift */,
+				0EA1CA8C44F24E9CAF7041AE /* InvoiceLineItem.swift */,
+				6970FB0FA588476691276177 /* InvoiceStatus.swift */,
+				B80D8F1AEA3C43D39BFFA30A /* Person.swift */,
+				64A079EB36A14F7C808058F0 /* Receipt.swift */,
+				BF17C45477EA47F68886B860 /* TimeEntry.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6F6934508A5D489A80E2FDFC /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				120DFBC2D7BE4E05AE6FCB7A /* AppStorageKeys.swift */,
+				EBC0D46C11AB42FB99665316 /* Formatters.swift */,
+				26F70E50204E402D8453017C /* InvoicePDFGenerator.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		39D2A26B73B24C2E9C1C8A48 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FFA19EAE17884D42B08FBD41 /* Components */,
+				22AE3173933745D8B8F29663 /* Driving */,
+				686AE11C5A70427C99885844 /* Invoices */,
+				D7B2AC59372448EF9B72A175 /* Receipts */,
+				151DA6BF826843A3893F968C /* RootTabView.swift */,
+				DC1FEC22B3304919BEC3486B /* Settings */,
+				E8F0C21F26624687A9C89665 /* Time */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FFA19EAE17884D42B08FBD41 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				ACAC31F4119F4FE48B52947F /* CameraPicker.swift */,
+				7B13E14DFFAF4CD99F74122E /* EmptyStateView.swift */,
+				3AD6E47B598F47FB9A34705D /* ShareSheet.swift */,
+				18D5553FFF904AD0809D9C00 /* StatCard.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		22AE3173933745D8B8F29663 /* Driving */ = {
+			isa = PBXGroup;
+			children = (
+				AC2FDF00ECA543DD8594EB2C /* AddEditTripView.swift */,
+				2517564DCD984372A7888485 /* DrivingListView.swift */,
+				8F423911EF4D480F9B6D6608 /* TripRowView.swift */,
+			);
+			path = Driving;
+			sourceTree = "<group>";
+		};
+		686AE11C5A70427C99885844 /* Invoices */ = {
+			isa = PBXGroup;
+			children = (
+				F06ECB69924743F2B0B284E4 /* AddEditClientView.swift */,
+				54ABF4D6EE9D459FAA7A136F /* AddEditInvoiceView.swift */,
+				F0F2B6C88727416193610B01 /* ClientsListView.swift */,
+				8C1448FD617548CAAABC54BB /* InvoiceDetailView.swift */,
+				2479FE63024E4F78842C58F2 /* InvoiceRowView.swift */,
+				7C60EAE989BA4D25B3D04485 /* InvoicesListView.swift */,
+			);
+			path = Invoices;
+			sourceTree = "<group>";
+		};
+		D7B2AC59372448EF9B72A175 /* Receipts */ = {
+			isa = PBXGroup;
+			children = (
+				FB389B098B1A46BEB0557601 /* AddEditReceiptView.swift */,
+				21A528D0F00C49D4BFE92475 /* ReceiptRowView.swift */,
+				900C1DCAFE3741B5A96FAF3F /* ReceiptsListView.swift */,
+			);
+			path = Receipts;
+			sourceTree = "<group>";
+		};
+		DC1FEC22B3304919BEC3486B /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				B8457C5341664F0E8B19C39E /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		E8F0C21F26624687A9C89665 /* Time */ = {
+			isa = PBXGroup;
+			children = (
+				40E10D8ACD9040D48A48008E /* AddEditPersonView.swift */,
+				0D4B8BE1A7F74E9FBEDECBBD /* AddEditTimeEntryView.swift */,
+				7E995D82040B4527B0B42E8A /* PeopleListView.swift */,
+				8CB17CE6585949BEBAFBF214 /* TimeEntriesListView.swift */,
+				3384C7F0FB0E41B9BC93D34C /* TimeTabView.swift */,
+				7CBBB3DABEFF43389D8F24F9 /* TimerView.swift */,
+			);
+			path = Time;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5BBEFD0000000000000000E1 /* GigTrack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDDC02F0E72D46F4A06C9A95 /* Build configuration list for PBXNativeTarget "GigTrack" */;
+			buildPhases = (
+				6E4F090B2B7D4AEF9D30A6F9 /* Sources */,
+				9AB0689E065C4178AA9EA5D8 /* Frameworks */,
+				CFF819910FE842E4B80F0354 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GigTrack;
+			productName = GigTrack;
+			productReference = 5BBEFD0000000000000000A1 /* GigTrack.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5BBEFD0000000000000000B1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					5BBEFD0000000000000000E1 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = 97F9644A729A4312804372DD /* Build configuration list for PBXProject "GigTrack" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5BBEFD0000000000000000C1;
+			productRefGroup = 5BBEFD0000000000000000D1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5BBEFD0000000000000000E1 /* GigTrack */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CFF819910FE842E4B80F0354 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				517520A5386F4BDC82C66E3C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6E4F090B2B7D4AEF9D30A6F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				986B525CF3A344F49DAD04C3 /* GigTrackApp.swift in Sources */,
+				BA0AE70FF9E340EBAF2D39C7 /* Client.swift in Sources */,
+				52E3524E5E6E4BBC8B4D3C4F /* DrivingTrip.swift in Sources */,
+				49628E87754A4F6995310A2F /* Invoice.swift in Sources */,
+				68368573D260431BA59B2767 /* InvoiceLineItem.swift in Sources */,
+				DB19D007786141C295A1C84F /* InvoiceStatus.swift in Sources */,
+				D4C3EC5945604615902490BA /* Person.swift in Sources */,
+				07C704F6DD5641DAA139125A /* Receipt.swift in Sources */,
+				3DF235054F3D44E2A305CBE5 /* TimeEntry.swift in Sources */,
+				DF4A0F3EB7F34522AB1AB83E /* AppStorageKeys.swift in Sources */,
+				D748F1CF4DF04C95BBDF63B8 /* Formatters.swift in Sources */,
+				971787C2F16D447D8AAD607D /* InvoicePDFGenerator.swift in Sources */,
+				47414E2B5B794C828DF3777F /* CameraPicker.swift in Sources */,
+				325AC3838C514C8191E5EE5D /* EmptyStateView.swift in Sources */,
+				05DB3CC928F8480F9AD42888 /* ShareSheet.swift in Sources */,
+				DDCC29AD235E4176A522BEFA /* StatCard.swift in Sources */,
+				B8B258CBA7204DED87B11F21 /* AddEditTripView.swift in Sources */,
+				B587043AD4C7499D8BF37D49 /* DrivingListView.swift in Sources */,
+				7AE91CD6864448CF960023FA /* TripRowView.swift in Sources */,
+				CC00F2F51A684F56A2EAC523 /* AddEditClientView.swift in Sources */,
+				C295744FA9F34BC0BC8AB61D /* AddEditInvoiceView.swift in Sources */,
+				C5B1C6FA7DF34FE8BDB07C34 /* ClientsListView.swift in Sources */,
+				2DFDE48430284EF084567B5C /* InvoiceDetailView.swift in Sources */,
+				28D2FD65CACF4087938E6656 /* InvoiceRowView.swift in Sources */,
+				486AA4511ECF400FACFDBD00 /* InvoicesListView.swift in Sources */,
+				A592983692A2400981158045 /* AddEditReceiptView.swift in Sources */,
+				824F90B8C385455B83A7EB40 /* ReceiptRowView.swift in Sources */,
+				C6657677E496431F8A28F29C /* ReceiptsListView.swift in Sources */,
+				A244ABBE128444B499CDBEA8 /* RootTabView.swift in Sources */,
+				B62E2115DCF04893A0F1BF96 /* SettingsView.swift in Sources */,
+				9941B4FFE3AC4F2C9C26321C /* AddEditPersonView.swift in Sources */,
+				684B3358BA564E77BD685D2B /* AddEditTimeEntryView.swift in Sources */,
+				730EE310537947AC9179DCA3 /* PeopleListView.swift in Sources */,
+				EFB3FC47AB244A8B888778D5 /* TimeEntriesListView.swift in Sources */,
+				3AC69870995C442095537382 /* TimeTabView.swift in Sources */,
+				7DA5A021DD2C43B39BBA268A /* TimerView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0390384ADF51475381BBE72B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		262C26B57AEF4326983CFB0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5116D854BE084177B13D83A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "GigTrack";
+				INFOPLIST_KEY_NSCameraUsageDescription = "GigTrack uses the camera to photograph receipts.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cfmurph.gigtrack;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0697B105A2D44CC2AFF3191F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "GigTrack";
+				INFOPLIST_KEY_NSCameraUsageDescription = "GigTrack uses the camera to photograph receipts.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cfmurph.gigtrack;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		97F9644A729A4312804372DD /* Build configuration list for PBXProject "GigTrack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0390384ADF51475381BBE72B /* Debug */,
+				262C26B57AEF4326983CFB0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DDDC02F0E72D46F4A06C9A95 /* Build configuration list for PBXNativeTarget "GigTrack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5116D854BE084177B13D83A8 /* Debug */,
+				0697B105A2D44CC2AFF3191F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5BBEFD0000000000000000B1 /* Project object */;
+}
