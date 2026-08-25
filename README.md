@@ -32,6 +32,13 @@ GigTrack/
     └── Assets.xcassets/        # App icon + accent color
 ```
 
+## Browser Preview (no Xcode required)
+
+`GigTrack/WebPreview/` contains a standalone HTML/CSS/JS mockup of the app's screens and flows,
+for quickly demoing or reviewing the UX without Xcode/iOS Simulator. See
+[`GigTrack/WebPreview/README.md`](GigTrack/WebPreview/README.md) for how to run it. It is not
+part of the iOS build — the Xcode project is the real app.
+
 ## Requirements
 
 - macOS with **Xcode 16** (or newer) installed
