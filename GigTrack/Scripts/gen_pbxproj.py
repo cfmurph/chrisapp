@@ -58,6 +58,7 @@ root_node = build_tree(APP_DIR, PROJECT_NAME)
 
 swift_files = []          # Node list
 asset_catalogs = []       # Node list
+entitlements_files = []   # Node list (referenced only, not part of a build phase)
 
 
 def walk(node, prefix):
@@ -70,6 +71,8 @@ def walk(node, prefix):
     else:
         if node.name.endswith(".swift"):
             swift_files.append(node)
+        elif node.name.endswith(".entitlements"):
+            entitlements_files.append(node)
 
 
 for c in root_node.children:
@@ -79,6 +82,8 @@ for c in root_node.children:
 for n in swift_files + asset_catalogs:
     n.file_ref_id = new_id()
     n.build_file_id = new_id()
+for n in entitlements_files:
+    n.file_ref_id = new_id()
 
 # These IDs are fixed (24 uppercase hex chars, matching Xcode's own convention)
 # rather than randomly generated, so that the checked-in shared Xcode scheme
@@ -137,6 +142,11 @@ def emit_file_entries(node):
         )
         lines_build_files.append(
             f'\t\t{node.build_file_id} /* {node.name} in Sources */ = {{isa = PBXBuildFile; fileRef = {node.file_ref_id} /* {node.name} */; }};'
+        )
+    elif node.name.endswith(".entitlements"):
+        # Referenced only via the CODE_SIGN_ENTITLEMENTS build setting, not a build phase.
+        lines_file_refs.append(
+            f'\t\t{node.file_ref_id} /* {node.name} */ = {{isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = {node.name}; sourceTree = "<group>"; }};'
         )
 
 
@@ -198,6 +208,12 @@ sources_build_files = "\n".join(
 resources_build_files = "\n".join(
     f'\t\t\t\t{n.build_file_id} /* {n.name} in Resources */,' for n in asset_catalogs
 )
+
+# Only supports a single entitlements file at the top level of the app source folder.
+entitlements_setting_line = ""
+if entitlements_files:
+    entitlements_relative_path = f"{PROJECT_NAME}/{entitlements_files[0].name}"
+    entitlements_setting_line = f'\t\t\t\tCODE_SIGN_ENTITLEMENTS = "{entitlements_relative_path}";\n'
 
 pbxproj = f'''// !$*UTF8*$!
 {{
@@ -442,7 +458,7 @@ pbxproj = f'''// !$*UTF8*$!
 \t\t\t\tASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 \t\t\t\tASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 \t\t\t\tCODE_SIGN_STYLE = Automatic;
-\t\t\t\tCURRENT_PROJECT_VERSION = 1;
+{entitlements_setting_line}\t\t\t\tCURRENT_PROJECT_VERSION = 1;
 \t\t\t\tGENERATE_INFOPLIST_FILE = YES;
 \t\t\t\tINFOPLIST_KEY_CFBundleDisplayName = "GigTrack";
 \t\t\t\tINFOPLIST_KEY_NSCameraUsageDescription = "GigTrack uses the camera to photograph receipts.";
@@ -469,7 +485,7 @@ pbxproj = f'''// !$*UTF8*$!
 \t\t\t\tASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 \t\t\t\tASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 \t\t\t\tCODE_SIGN_STYLE = Automatic;
-\t\t\t\tCURRENT_PROJECT_VERSION = 1;
+{entitlements_setting_line}\t\t\t\tCURRENT_PROJECT_VERSION = 1;
 \t\t\t\tGENERATE_INFOPLIST_FILE = YES;
 \t\t\t\tINFOPLIST_KEY_CFBundleDisplayName = "GigTrack";
 \t\t\t\tINFOPLIST_KEY_NSCameraUsageDescription = "GigTrack uses the camera to photograph receipts.";

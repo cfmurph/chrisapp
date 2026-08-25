@@ -4,11 +4,13 @@ import SwiftData
 /// A single logged block of work time, optionally still running (endTime == nil).
 @Model
 final class TimeEntry {
-    var id: UUID
-    var project: String
-    var startTime: Date
+    // CloudKit-backed SwiftData requires every non-optional attribute to have
+    // a property-level default value; relationships must stay optional.
+    var id: UUID = UUID()
+    var project: String = ""
+    var startTime: Date = Date.now
     var endTime: Date?
-    var notes: String
+    var notes: String = ""
     var person: Person?
 
     init(

@@ -102,12 +102,7 @@ struct InvoiceDetailView: View {
             AddEditInvoiceView(invoice: invoice)
         }
         .sheet(item: $shareItem) { item in
-            ShareSheet(activityItems: [item.url])
+            ShareSheet(activityItems: item.urls)
         }
     }
-}
-
-struct ShareItem: Identifiable {
-    let id = UUID()
-    let url: URL
 }

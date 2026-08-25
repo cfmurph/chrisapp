@@ -3,13 +3,16 @@ import SwiftData
 
 @Model
 final class Receipt {
-    var id: UUID
-    var date: Date
-    var vendor: String
-    var amount: Double
-    var category: String
-    var notes: String
-    var createdAt: Date
+    // CloudKit-backed SwiftData requires every non-optional attribute to have
+    // a property-level default value, so every stored property below is
+    // declared with one even though `init` always supplies a real value.
+    var id: UUID = UUID()
+    var date: Date = Date.now
+    var vendor: String = ""
+    var amount: Double = 0
+    var category: String = ReceiptCategory.other.rawValue
+    var notes: String = ""
+    var createdAt: Date = Date.now
 
     @Attribute(.externalStorage)
     var imageData: Data?
