@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>GigTrack Preview</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page">
+    <div class="phone">
+      <div class="notch"></div>
+      <div class="statusbar">
+        <span class="time">9:41</span>
+        <span class="icons">●●● 5G 🔋</span>
+      </div>
+
+      <div class="nav-bar">
+        <div class="nav-leading" id="navLeading"></div>
+        <div class="nav-title" id="navTitle">Receipts</div>
+        <div class="nav-trailing" id="navTrailing"></div>
+      </div>
+
+      <div class="screen" id="screen"></div>
+
+      <div class="tabbar">
+        <button class="tab-item active" data-tab="receipts">
+          <span class="tab-icon">🧾</span><span>Receipts</span>
+        </button>
+        <button class="tab-item" data-tab="invoices">
+          <span class="tab-icon">📄</span><span>Invoices</span>
+        </button>
+        <button class="tab-item" data-tab="time">
+          <span class="tab-icon">⏱️</span><span>Time</span>
+        </button>
+        <button class="tab-item" data-tab="driving">
+          <span class="tab-icon">🚗</span><span>Driving</span>
+        </button>
+        <button class="tab-item" data-tab="settings">
+          <span class="tab-icon">⚙️</span><span>Settings</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="sidenote">
+      <h1>GigTrack — Interactive Preview</h1>
+      <p>
+        This is a browser mockup of the real SwiftUI/SwiftData iOS app, standing in because this
+        sandbox has no Xcode/iOS Simulator. It mirrors the same screens, data model, and flows
+        as the code in <code>GigTrack/GigTrack/</code>. Data is saved to your browser's local storage.
+      </p>
+      <ul>
+        <li>🧾 Add a receipt (photo, vendor, amount, category)</li>
+        <li>📄 Create clients &amp; invoices, mark paid, share a PDF preview</li>
+        <li>⏱️ Add crew, start/stop a live timer, edit logged hours</li>
+        <li>🚗 Log a trip and see the driving cost calculated</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="modalBackdrop">
+    <div class="modal" id="modal"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
