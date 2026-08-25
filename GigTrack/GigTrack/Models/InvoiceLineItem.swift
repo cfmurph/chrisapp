@@ -3,11 +3,13 @@ import SwiftData
 
 @Model
 final class InvoiceLineItem {
-    var id: UUID
-    var itemDescription: String
-    var quantity: Double
-    var unitPrice: Double
-    var sortOrder: Int
+    // CloudKit-backed SwiftData requires every non-optional attribute to have
+    // a property-level default value; relationships must stay optional.
+    var id: UUID = UUID()
+    var itemDescription: String = ""
+    var quantity: Double = 1
+    var unitPrice: Double = 0
+    var sortOrder: Int = 0
     var invoice: Invoice?
 
     init(

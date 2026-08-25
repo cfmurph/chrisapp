@@ -3,15 +3,17 @@ import SwiftData
 
 @Model
 final class Invoice {
-    var id: UUID
-    var invoiceNumber: String
-    var issueDate: Date
-    var dueDate: Date
-    var statusRawValue: String
-    var notes: String
+    // CloudKit-backed SwiftData requires every non-optional attribute to have
+    // a property-level default value; relationships must stay optional.
+    var id: UUID = UUID()
+    var invoiceNumber: String = ""
+    var issueDate: Date = Date.now
+    var dueDate: Date = Date.now
+    var statusRawValue: String = InvoiceStatus.draft.rawValue
+    var notes: String = ""
     var paidDate: Date?
     var client: Client?
-    var createdAt: Date
+    var createdAt: Date = Date.now
 
     @Relationship(deleteRule: .cascade, inverse: \InvoiceLineItem.invoice)
     var lineItems: [InvoiceLineItem]? = []

@@ -12,3 +12,13 @@ struct ShareSheet: UIViewControllerRepresentable {
 
     func updateUIViewController(_ uiViewController: UIActivityViewController, context: Context) {}
 }
+
+/// `.sheet(item:)`-friendly wrapper around one or more file URLs to share
+/// (e.g. an invoice PDF, or a batch of CSV exports).
+struct ShareItem: Identifiable {
+    let id = UUID()
+    let urls: [URL]
+
+    init(url: URL) { self.urls = [url] }
+    init(urls: [URL]) { self.urls = urls }
+}

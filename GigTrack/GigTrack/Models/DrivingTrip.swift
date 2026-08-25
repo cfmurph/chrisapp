@@ -3,15 +3,18 @@ import SwiftData
 
 @Model
 final class DrivingTrip {
-    var id: UUID
-    var date: Date
-    var startLocation: String
-    var endLocation: String
-    var miles: Double
-    var ratePerMile: Double
-    var purpose: String
-    var notes: String
-    var createdAt: Date
+    // CloudKit-backed SwiftData requires every non-optional attribute to have
+    // a property-level default value, so every stored property below is
+    // declared with one even though `init` always supplies a real value.
+    var id: UUID = UUID()
+    var date: Date = Date.now
+    var startLocation: String = ""
+    var endLocation: String = ""
+    var miles: Double = 0
+    var ratePerMile: Double = 0.67
+    var purpose: String = ""
+    var notes: String = ""
+    var createdAt: Date = Date.now
 
     init(
         date: Date = .now,
